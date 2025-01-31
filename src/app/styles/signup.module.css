@@ -1,0 +1,330 @@
+/* -----------------------------------------------
+   1) SignupPage Container (fundo + toggle)
+   ----------------------------------------------- */
+   .mainContainer {
+    width: 100%;
+    min-height: 100vh;
+    background: #f5f7fa; /* cor de fundo global */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+  }
+  
+  .toggleContainer {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+  }
+  
+  .toggleButton {
+    padding: 10px 20px;
+    background: #ececec;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+  }
+  
+  .toggleButton:hover {
+    background: #ddd;
+  }
+  
+  .active {
+    background: #007bff;
+    color: #fff;
+  }
+  
+  /* -----------------------------------------------
+     2) Layout de cada Step (signupWrapper)
+     ----------------------------------------------- */
+  .signupWrapper {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: #fff; 
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  }
+  
+  /* Coluna esquerda do Step */
+  .leftContainer {
+    flex: 1;
+    padding: 40px;
+    background: #f0f0ff; /* cor de fundo sutil */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Se quiser centralizar verticalmente. Caso contrário, remover. */
+  }
+  
+  /* Título e subtítulo do mini hero */
+  .title {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  .subtitle {
+    font-size: 1rem;
+    color: #555;
+    max-width: 400px;
+    margin-bottom: 20px;
+  }
+  
+  /* Animação ou imagem */
+  .animation {
+    width: 100%;
+    max-width: 300px;
+    margin-top: 10px;
+  }
+  
+  /* Coluna direita do Step */
+  .rightContainer {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* -----------------------------------------------
+     3) O card do formulário (stepCard)
+     ----------------------------------------------- */
+  .stepCard {
+    width: 100%;
+    max-width: 450px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Stepper */
+  .stepperContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  
+  /* Título e subtítulo do form */
+  .formTitle {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  .formSubtitle {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Seções menores dentro do form */
+  .sectionHeading {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  /* Inputs */
+  .inputGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  /* Upload button */
+  .uploadButton {
+    padding: 12px 15px;
+    background: #ececec;
+    border-radius: 8px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    color: #555;
+    transition: background 0.3s;
+  }
+  .uploadButton:hover {
+    background: #ddd;
+  }
+  
+  /* Check termos */
+  .terms {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+  }
+  .terms a {
+    color: #007bff;
+    text-decoration: underline;
+  }
+  
+  /* Botões de navegação */
+  .buttonGroup {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  /* Exemplo: se tiver skillTag */
+  .skillTag {
+    display: inline-flex;
+    align-items: center;
+    background: #e7f1ff;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: #333;
+  }
+  .skillTag button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: 5px;
+    color: #888;
+  }
+  
+  /* -----------------------------------------------
+     4) Responsividade
+     ----------------------------------------------- */
+  @media (max-width: 992px) {
+    /* O step layout (signupWrapper) fica em colunas empilhadas */
+    .signupWrapper {
+      flex-direction: column;
+      border-radius: 0; /* se preferir */
+    }
+    .leftContainer, 
+    .rightContainer {
+      padding: 20px;
+    }
+    .animation {
+      margin: 0 auto;
+    }
+  }
+  /* Botão de voltar */
+.backButton {
+    background: none;
+    border: none;
+    color: #0056b3;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+ 
+}
+/* Exemplo de título acima dos botões sociais */
+.socialTitle {
+    text-align: center;
+    margin: 15px 0 10px; /* top right bottom left */
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Contêiner para botões sociais */
+  .socialButtons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  /* Exemplo de botões específicos */
+  .facebookButton {
+    background: #3b5998;
+    color: #fff;
+    flex: 1; /* ou remova se não quiser que eles estiquem igualmente */
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .facebookButton:hover {
+    background: #2e4375;
+  }
+  
+  .googleButton {
+    background: #db4437;
+    color: #fff;
+    flex: 1;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .googleButton:hover {
+    background: #c23325;
+  }
+  
+  /* Exemplo de link "Already have an account?" */
+  .loginLink {
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #555;
+  }
+  .loginLink a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+  }
+ /* Botões lado a lado */
+.buttonRow {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* Botão "Add Institution +" 
+     - estilo mais "leve" (fundo claro, borda) */
+  .addButton {
+    background-color: #fff;  /* ou outro tom claro */
+    color: #444;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    font-weight: 500;
+  }
+  .addButton:hover {
+    background: #f2f2f2;
+  }
+  
+  /* Botão "Save" 
+     - estilo principal (fundo colorido) */
+  .saveButton {
+    background-color: #6366f1; /* roxo-azulado */
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px 20px;
+    transition: background 0.3s;
+    font-weight: 500;
+  }
+  .saveButton:hover {
+    background-color: #4f46e5;
+  }
+  /* Botão "Go Back" corrigido */
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #007bff;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 20px;
+
+  /* Alinhar à esquerda */
+  align-self: flex-start;
+}

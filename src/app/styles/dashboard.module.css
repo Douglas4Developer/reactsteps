@@ -1,0 +1,129 @@
+.dashboardContainer {
+    display: flex;
+    min-height: 100vh;
+    background: #f4f7fa; /* Fundo mais claro e neutro */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* Sidebar lateral */
+  .sidebar {
+    width: 240px;
+    background: #2d3748; /* Azul escuro */
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    color: #ffffff;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #ffffff;
+  }
+  
+  .navMenu {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .navMenu button {
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 12px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s, color 0.3s;
+    color: #cbd5e0;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .navMenu button:hover {
+    background: #4a5568;
+    color: #ffffff;
+  }
+  
+  .active {
+    background: #4fd1c5 !important; /* Destaque em ciano */
+    color: #ffffff !important;
+  }
+  
+  /* Conteúdo principal */
+  .mainContent {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+  
+  .mainContent h1 {
+    margin-bottom: 15px;
+    color: #2d3748;
+  }
+  
+  .mainContent p {
+    color: #4a5568;
+    margin-bottom: 25px;
+  }
+  
+  /* Exemplo de cards */
+  .cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .card {
+    flex: 1 1 200px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.2s;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .card h2 {
+    margin-bottom: 12px;
+    font-size: 18px;
+    color: #4a5568;
+  }
+  
+  .card p {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2d3748;
+  }
+  
+  /* Container para a área de gráficos */
+  .chartsContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-top: 40px;
+  }
+  
+  /* Estilos extras para os gráficos */
+  .chartWrapper {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  .chartTitle {
+    margin-bottom: 15px;
+    color: #2d3748;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
