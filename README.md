@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 📚 React Steps - Educational Platform
 
-## Getting Started
+🚀 Bem-vindo ao **React Steps**, uma plataforma educacional interativa que permite que estudantes e tutores se cadastrem, gerenciem conteúdos e interajam de forma intuitiva.
 
-First, run the development server:
+![React Steps Screenshot](https://via.placeholder.com/1200x600?text=Projeto+React+Steps)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📌 **Índice**
+- [📌 Sobre o Projeto](#-sobre-o-projeto)
+- [🚀 Tecnologias Utilizadas](#-tecnologias-utilizadas)
+- [⚙️ Pré-requisitos](#️-pré-requisitos)
+- [📦 Como Rodar o Projeto](#-como-rodar-o-projeto)
+- [🎨 Estrutura do Projeto](#-estrutura-do-projeto)
+- [🛠️ Funcionalidades](#️-funcionalidades)
+- [📄 Licença](#-licença)
+- [💬 Contato](#-contato)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📌 **Sobre o Projeto**
+O **React Steps** é uma plataforma moderna desenvolvida com **Next.js**, onde usuários podem se registrar como **estudantes ou tutores** e acessar conteúdos educacionais de forma organizada.
 
-## Learn More
+Ele possui um **design intuitivo e responsivo**, proporcionando uma ótima experiência ao usuário.
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 **Tecnologias Utilizadas**
+- ⚛ **React.js** - Biblioteca para interfaces dinâmicas
+- 🌐 **Next.js** - Framework para SSR e otimização de SEO
+- 🎨 **Styled Components** - Estilização moderna com CSS-in-JS
+- 🔄 **React Hooks** - Gerenciamento de estado eficiente
+- 📦 **Vercel** - Deploy rápido e confiável
+- 🔧 **Git & GitHub** - Versionamento de código
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## ⚙️ **Pré-requisitos**
+Antes de começar, você precisará ter instalado em sua máquina:
+- **[Node.js](https://nodejs.org/en/)** (versão 16+)
+- **[Git](https://git-scm.com/)**
+- **[VS Code](https://code.visualstudio.com/)** (ou outro editor de sua preferência)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📦 **Como Rodar o Projeto**
+### 🔹 **1️⃣ Clonar o Repositório**
+```sh
+git clone https://github.com/Douglas4Developer/reactsteps.git
+cd reactsteps
