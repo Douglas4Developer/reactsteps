@@ -56,7 +56,7 @@ export default function Step4({ back }: { back: () => void }) {
             <Input
               placeholder="Your Full name as displayed in your bank"
               value={fullNameBank}
-              onChange={(e: { target: { value: SetStateAction<string>; }; }) => setFullNameBank(e.target.value)}
+              onChange={(e) => setFullNameBank(e.target.value)}
             />
             <Input
               placeholder="Name of Bank"
