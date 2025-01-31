@@ -19,6 +19,7 @@ const StyledButton = styled.button`
 // Definição da tipagem correta
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
+  variant?: "primary" | "secondary"; // Definir variantes suportadas
 }
 
 // Aplicando a tipagem
