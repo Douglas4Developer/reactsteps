@@ -15,8 +15,11 @@ import {
   Tooltip,
   Legend,
   ArcElement,
+  RadarController,
+  Filler,
 } from "chart.js";
-import { Bar, Line, Pie } from "react-chartjs-2";
+import { Bar, Line, Pie, Radar } from "react-chartjs-2";
+import { ChartOptions } from 'chart.js';
 
 // Registro dos componentes necessários do Chart.js
 ChartJS.register(
@@ -28,7 +31,9 @@ ChartJS.register(
   ArcElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  RadarController,
+  Filler
 );
 
 export default function DashboardPage() {
@@ -48,7 +53,7 @@ export default function DashboardPage() {
     ],
   };
 
-  const barOptions = {
+  const barOptions: ChartOptions<'bar'> = {
     responsive: true,
     plugins: {
       title: {
@@ -99,7 +104,7 @@ export default function DashboardPage() {
     ],
   };
 
-  const lineOptions = {
+  const lineOptions: ChartOptions<'line'> = {
     responsive: true,
     plugins: {
       title: {
@@ -154,7 +159,7 @@ export default function DashboardPage() {
     ],
   };
 
-  const pieOptions = {
+  const pieOptions: ChartOptions<'pie'> = {
     responsive: true,
     plugins: {
       title: {
@@ -166,7 +171,7 @@ export default function DashboardPage() {
         },
       },
       legend: {
-        position: "bottom",
+        position: "bottom", // Valor válido
         labels: {
           color: "#4a5568",
         },
@@ -192,7 +197,7 @@ export default function DashboardPage() {
     ],
   };
 
-  const radarOptions = {
+  const radarOptions: ChartOptions<'radar'> = {
     responsive: true,
     plugins: {
       title: {
@@ -317,7 +322,7 @@ export default function DashboardPage() {
               </div>
               <div className={styles.chartWrapper}>
                 <div className={styles.chartTitle}>Avaliação de Desempenho</div>
-                <Line data={radarData} options={radarOptions} />
+                <Radar data={radarData} options={radarOptions} />
               </div>
             </div>
           </div>
