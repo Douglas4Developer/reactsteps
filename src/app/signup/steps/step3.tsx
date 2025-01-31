@@ -2,8 +2,8 @@
 import { useState } from "react";
 import Stepper from "@/components/Stepper";
 import Button from "@/components/Button";
-import Lottie from "lottie-react";
-import animationData from "@/assets/lotties/skills.json";
+import Lottie from "lottie-react";  
+import animationData from "@/assets/lotties/skills.json"; // Agora sendo usado
 import styles from "@/app/styles/signup.module.css";
 
 export default function Step3({ next, back }: { next: () => void; back: () => void }) {
@@ -35,7 +35,7 @@ export default function Step3({ next, back }: { next: () => void; back: () => vo
       <div className={styles.leftContainer}>
         <h1 className={styles.title}>Your Skills</h1>
         <p className={styles.subtitle}>Select up to 10 skills that define your expertise.</p>
-        {/* <Lottie animationData={animationData} className={styles.animation} /> */}
+        <Lottie animationData={animationData} className={styles.animation} />
       </div>
 
       {/* Lado direito: Card do Step */}

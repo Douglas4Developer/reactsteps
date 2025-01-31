@@ -65,6 +65,7 @@ export default function StudentStep2({
   const handleSaveEducation = () => {
     console.log("Saving education list:", educationList);
   };
+
   const handleSaveExperience = () => {
     console.log("Saving experience list:", experienceList);
   };
@@ -142,7 +143,6 @@ export default function StudentStep2({
             </Button>
           </div>
 
-
           {/* Seção Experience */}
           <h2 className={styles.formTitle}>Experience</h2>
           <p className={styles.formSubtitle}>Name of Institution, from, to, position held</p>
@@ -189,21 +189,20 @@ export default function StudentStep2({
             </div>
           ))}
           <div className={styles.buttonRow}>
-            <Button className={styles.addButton} onClick={addEducation}>
-              Add Institution +
+            <Button className={styles.addButton} onClick={addExperience}>
+              Add Experience +
             </Button>
-            <Button className={styles.saveButton} onClick={handleSaveEducation}>
+            <Button className={styles.saveButton} onClick={handleSaveExperience}>
               Save
             </Button>
           </div>
-
 
           {/* Botão final de navegação */}
           <Button onClick={next} style={{ width: "100%", marginTop: "10px" }}>
             Proceed
           </Button>
 
-          {/* Botão para voltar (opcional, se quiser ao lado) */}
+          {/* Botão para voltar */}
           <Button 
             onClick={back} 
             variant="secondary" 

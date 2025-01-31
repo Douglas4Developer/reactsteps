@@ -1,6 +1,6 @@
 "use client";
 import { createGlobalStyle } from "styled-components";
-
+import Head from 'next/head';
 const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
@@ -27,9 +27,9 @@ const GlobalStyle = createGlobalStyle`
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <head>
+      <Head>
         <title>Educational Platform</title>
-      </head>
+      </Head>
       <body>
         <GlobalStyle />
         {children}

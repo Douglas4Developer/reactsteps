@@ -8,7 +8,7 @@ interface StepLayoutProps {
   step: number;
   title: string;
   description?: string;
-  animationData: any;
+  animationData: object; // ✅ Corrigindo `any`
   children: ReactNode;
 }
 

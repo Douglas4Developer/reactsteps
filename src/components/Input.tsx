@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { InputHTMLAttributes } from "react";
 
 const StyledInput = styled.input`
   width: 100%;
@@ -9,6 +10,11 @@ const StyledInput = styled.input`
   font-size: 16px;
 `;
 
-export default function Input(props: any) {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  // Adicione propriedades personalizadas aqui
+  customProp?: string;
+}
+
+export default function Input(props: InputProps) {
   return <StyledInput {...props} />;
 }
