@@ -6,18 +6,25 @@ import Button from "@/components/Button";
 import Lottie from "lottie-react";
 import userInfoAnimation from "@/assets/lotties/user-info.json";
 import styles from "@/app/styles/signup.module.css";
+import { useRouter } from 'next/navigation';
 
 export default function StudentStep1({ next }: { next: () => void }) {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter();
+
+
+  const handleGoBack = () => {
+    router.back();
+  };
 
   return (
     <div className={styles.signupWrapper}>
       {/* Lado esquerdo — Texto + Lottie */}
       <div className={styles.leftContainer}>
-      <button className={styles.backButton} onClick={() => history.back()}>
+      <button className={styles.backButton} onClick={handleGoBack}>
           ← Go back
         </button>
         <h1 className={styles.title}>

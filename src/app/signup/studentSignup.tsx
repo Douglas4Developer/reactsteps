@@ -16,7 +16,11 @@ export default function StudentSignup() {
   const [password, setPassword] = useState("");
 
   const router = useRouter(); // Inicializa o hook do router
+ 
 
+  const handleGoBack = () => {
+    router.back();
+  };
   const handleSignup = () => {
     router.push("/dashboard");
   };
@@ -24,7 +28,7 @@ export default function StudentSignup() {
   return (
     <div className={styles.container}>
       {/* Layout lado a lado */}
-      <button className={styles.backButton} onClick={() => history.back()}>
+      <button className={styles.backButton} onClick={handleGoBack}>
         ← Go back
       </button>
       <div className={styles.signupWrapper}>

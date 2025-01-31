@@ -1,9 +1,12 @@
 "use client";
+import dynamic from "next/dynamic";
+
+ const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
 
 import Link from "next/link";
 import { useState } from "react";
 import { useRouter } from "next/navigation"; // <-- Import useRouter do Next.js
-import Lottie from "lottie-react";
+ 
 import loginAnimation from "@/assets/lotties/login-animation.json";
 import styles from "../styles/login.module.css";
 import Image from "next/image";
@@ -19,12 +22,16 @@ export default function Login() {
   const handleLogin = () => {
     router.push("/dashboard");
   };
-
+  const handleGoBack = () => {
+    if (router) {
+      router.back();
+    }
+  };
   return (
     <div className={styles.loginContainer}>
       {/* Esquerda */}
       <div className={styles.leftContainer}>
-        <button className={styles.backButton} onClick={() => history.back()}>
+        <button className={styles.backButton} onClick={handleGoBack}>
           ← Go back
         </button>
         <h1 className={styles.title}>

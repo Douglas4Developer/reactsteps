@@ -1,4 +1,4 @@
-"use client";
+"use client"; 
 
 import { useState } from "react";
 import styles from "../styles/dashboard.module.css";
@@ -8,6 +8,7 @@ import {
   Chart as ChartJS,
   CategoryScale,
   LinearScale,
+  RadialLinearScale, // Importando RadialLinearScale
   BarElement,
   LineElement,
   PointElement,
@@ -25,6 +26,7 @@ import { ChartOptions } from 'chart.js';
 ChartJS.register(
   CategoryScale,
   LinearScale,
+  RadialLinearScale, // Registrando RadialLinearScale
   BarElement,
   LineElement,
   PointElement,
@@ -216,7 +218,7 @@ export default function DashboardPage() {
       },
     },
     scales: {
-      r: {
+      r: { // 'r' é a escala radial para gráficos Radar
         angleLines: {
           color: "#e2e8f0",
         },
